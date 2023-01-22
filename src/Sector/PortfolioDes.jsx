@@ -7,7 +7,7 @@ function PortfolioDes({ mode }) {
   const navigate = useNavigate();
   let id = useParams();
   id = id["*"];
-  let info = portfolio.find((item) => item.id == id);
+  let info = portfolio.find((item) => item.id.toString() === id);
   return (
     <div className="h-full w-full flex justify-center items-center">
       <div
@@ -84,13 +84,15 @@ function PortfolioDes({ mode }) {
             >
               Like This <AiOutlineLike />{" "}
             </button>
-            <button
+            <a
+              href={info?.link}
+              target="blank"
               className={`flex gap-4 ${
                 mode === "dark" ? "socialButton" : "socialButton-w"
               } justify-center items-center p-5 rounded-xl`}
             >
               VIEW PROJECT <AiOutlineRight />
-            </button>
+            </a>
           </div>
         </div>
       </div>

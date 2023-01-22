@@ -5,7 +5,7 @@ function PointCart({ name, time, point, description, mode }) {
   const [lightMode, setLightMode] = useState(false);
   return (
     <div
-      className={`flex relative duration-500 ease-linear ${
+      className={`flex justify-start relative duration-500 ease-linear w-full ${
         mode === "dark" ? "p-cart" : "p-cart-w"
       }`}
     >
@@ -39,14 +39,14 @@ function PointCart({ name, time, point, description, mode }) {
         </div>
       </div>
       <div
-        className={`flex justify-center items-center flex-col ${
+        className={`flex justify-center items-center flex-col w-full ${
           mode === "dark" ? "pointCart" : "pointCart-w"
         } p-10 rounded-2xl`}
         onMouseEnter={() => setLightMode(true)}
         onMouseLeave={() => setLightMode(false)}
       >
-        <div className="flex justify-between items-center gap-10">
-          <div className="flex flex-col gap-10 w-full duration-500">
+        <div className="flex justify-between items-center gap-10 w-full">
+          <div className="flex flex-col gap-10 w-full duration-500 justify-start ">
             <p
               className=" text-4xl font-semibold point-cart-heading duration-500"
               style={{
@@ -71,19 +71,21 @@ function PointCart({ name, time, point, description, mode }) {
             </p>
           </div>
           <div>
-            <Buttons text={point} mode={mode} lightMode={lightMode} />
+            {point !== "" && (
+              <Buttons text={point} mode={mode} lightMode={lightMode} />
+            )}
           </div>
         </div>
         <hr
           style={{
             borderBlockColor:
-              mode === "dark" ? "var(--color-tertiary)" : "var(--color-lightn)",
-            margin: "20px 5%",
+              mode === "dark" ? "var(--color-midgray)" : "var(--color-lightn)",
+            margin: "10px ",
           }}
         />
-        <div>
-          <p
-            className="text-2xl point-cart-body duration-500"
+        <div className="w-full">
+          <div
+            className="text-2xl point-cart-body duration-500 w-full  "
             style={{
               color:
                 mode === "dark"
@@ -91,8 +93,26 @@ function PointCart({ name, time, point, description, mode }) {
                   : "var(--color-body-white)",
             }}
           >
-            {description}
-          </p>
+            {description?.map((item, index) => {
+              const heading = () => {
+                if (item[Object.keys(item)[0]]?.length > 1) {
+                  return Object.keys(item)[0];
+                }
+              };
+              return (
+                <ul key={index + "de"} className="text-left">
+                  {heading()}
+                  {item[Object.keys(item)[0]]?.map((point, i) => {
+                    return (
+                      <li className="text-left" key={i + "desc"}>
+                        {point}
+                      </li>
+                    );
+                  })}
+                </ul>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>

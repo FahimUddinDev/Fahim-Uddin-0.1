@@ -1,8 +1,10 @@
 import React from "react";
 
-export const SocialMedia = ({ icon, mode }) => {
+export const SocialMedia = ({ icon, mode, link }) => {
   return (
-    <div
+    <a
+      href={link}
+      target="blank"
       className={`${
         mode === "dark" ? "socialButton" : "socialButton-w"
       } p-6 flex justify-center items-center rounded-md  min-w-min ${
@@ -12,7 +14,7 @@ export const SocialMedia = ({ icon, mode }) => {
       } text-4xl font-black cursor-pointer`}
     >
       {icon}
-    </div>
+    </a>
   );
 };
 export const Buttons = ({ text, mode, lightMode }) => {

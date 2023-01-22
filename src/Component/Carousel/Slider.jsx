@@ -103,7 +103,7 @@ function Slider({ mode }) {
               className={`flex relative ${transition}`}
               style={{
                 left: `${margin}%`,
-                webkitUserSelect: "none",
+                WebkitUserSelect: "none",
                 msUserSelect: "none",
                 userSelect: "none",
               }}
@@ -115,11 +115,11 @@ function Slider({ mode }) {
                 mode={mode}
               />
 
-              {review?.map((info) => {
+              {review?.map((info, i) => {
                 return (
                   <SingleSlide
                     info={info}
-                    key={info.name + info.id}
+                    key={info.name + info.id + i}
                     goLeft={goLeft}
                     goRight={goRight}
                     mode={mode}
@@ -149,6 +149,7 @@ function Slider({ mode }) {
                 onClick={() => {
                   setMargin((index + 1) * -100);
                 }}
+                key={index + "00"}
               ></div>
             );
           })}

@@ -22,8 +22,8 @@ function Home({ mode }) {
       <Features mode={mode} />
       <Portfolio mode={mode} />
       <Resume mode={mode} />
-      <Slider mode={mode} />
-      <Clients mode={mode} />
+      {/* <Slider mode={mode} /> */}
+      {/* <Clients mode={mode} /> */}
       <Pricing mode={mode} />
       <Blog mode={mode} />
       <Contact mode={mode} />

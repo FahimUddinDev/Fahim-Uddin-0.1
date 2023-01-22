@@ -4,9 +4,12 @@ import PointCart from "./PointCart";
 
 function CartDivision({ info, name, heading, mode }) {
   return (
-    <div>
-      <Heading name={name} heading={heading} size={6} mode={mode} />
-      <div className="flex relative">
+    <div className="w-full">
+      {name !== "" && (
+        <Heading name={name} heading={heading} size={6} mode={mode} />
+      )}
+
+      <div className={`flex relative w-full ${name === "" && "mt-40"}`}>
         <div
           className="absolute h-full z-0 "
           style={{
@@ -18,7 +21,7 @@ function CartDivision({ info, name, heading, mode }) {
             left: "5px",
           }}
         ></div>
-        <div className="flex  flex-col gap-10">
+        <div className="flex  flex-col gap-10 min-w-full">
           {info?.map((item, index) => {
             return (
               <PointCart

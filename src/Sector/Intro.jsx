@@ -2,9 +2,11 @@ import React from "react";
 import { SocialMedia } from "../Component/Buttons";
 import "@fontsource/montserrat";
 import { FiFacebook, FiInstagram, FiLinkedin, FiGithub } from "react-icons/fi";
-import icon1 from "../Assets/icons/icons-01.png";
-import icon2 from "../Assets/icons/icons-02.png";
-import icon3 from "../Assets/icons/icons-03.png";
+import { FaReact } from "react-icons/fa";
+import { TbBrandJavascript } from "react-icons/tb";
+import { SiRedux } from "react-icons/si";
+import { socialLinks } from "../Data/Portfolio";
+
 import image from "../Assets/Image/my-1.png";
 
 function Intro({ mode }) {
@@ -29,7 +31,7 @@ function Intro({ mode }) {
         >
           <div className="w-full h-full  flex flex-col gap-10 justify-between">
             <p className="text-2xl">WELCOME TO MY WORLD</p>
-            <p
+            <div
               style={{
                 color:
                   mode === "dark"
@@ -47,8 +49,8 @@ function Intro({ mode }) {
                 className="whitespace-nowrap leading-loose"
               >
                 Fahim Uddin
-              </span>{" "}
-              <br />{" "}
+              </span>
+              <br />
               <div className="mainHead">
                 a
                 <div className="message">
@@ -57,57 +59,46 @@ function Intro({ mode }) {
                   <div className="mt-5">Developer.</div>
                 </div>
               </div>
-            </p>
+            </div>
 
             <p className="text-2xl ">
-              I use animation as a third dimension by which to simplify
-              experiences and kuiding thro each and every interaction. I’m not
-              adding motion just to spruce things up, but doing it in ways that.
+              Passionate about learning and development with a desire to apply
+              skills on a larger development team. Eager to tackle more complex
+              problems and continue to find ways to maximize user efficiency.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row justify-between w-full">
             <div className="flex flex-col gap-4 mt-10">
               <p className="text-2xl"> FIND ME IN</p>
               <div className="flex gap-6">
-                <SocialMedia icon={<FiFacebook />} mode={mode} />
-                <SocialMedia icon={<FiInstagram />} mode={mode} />
-                <SocialMedia icon={<FiLinkedin />} mode={mode} />
-                <SocialMedia icon={<FiGithub />} mode={mode} />
+                <SocialMedia
+                  icon={<FiFacebook />}
+                  link={socialLinks.facebook}
+                  mode={mode}
+                />
+                <SocialMedia
+                  icon={<FiInstagram />}
+                  link={socialLinks.instagram}
+                  mode={mode}
+                />
+                <SocialMedia
+                  icon={<FiLinkedin />}
+                  link={socialLinks.linkdin}
+                  mode={mode}
+                />
+                <SocialMedia
+                  icon={<FiGithub />}
+                  link={socialLinks.github}
+                  mode={mode}
+                />
               </div>
             </div>
             <div className="flex flex-col gap-4 mt-10">
               <p className="text-2xl"> BEST SKILL ON</p>
               <div className="flex gap-6">
-                <SocialMedia
-                  icon={
-                    <img
-                      style={{ width: "22px", height: "22px" }}
-                      src={icon1}
-                      alt="icon"
-                    />
-                  }
-                  mode={mode}
-                />
-                <SocialMedia
-                  icon={
-                    <img
-                      style={{ width: "22px", height: "22px" }}
-                      src={icon2}
-                      alt="icon"
-                    />
-                  }
-                  mode={mode}
-                />
-                <SocialMedia
-                  icon={
-                    <img
-                      style={{ width: "22px", height: "22px" }}
-                      src={icon3}
-                      alt="icon"
-                    />
-                  }
-                  mode={mode}
-                />
+                <SocialMedia icon={<TbBrandJavascript />} mode={mode} />
+                <SocialMedia icon={<FaReact />} mode={mode} />
+                <SocialMedia icon={<SiRedux />} mode={mode} />
               </div>
             </div>
           </div>

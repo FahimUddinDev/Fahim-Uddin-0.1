@@ -2,6 +2,7 @@ import React from "react";
 import { SocialMedia } from "../Component/Buttons";
 import ContactForm from "../Component/Form/Contact";
 import { FiFacebook, FiLinkedin, FiInstagram, FiGithub } from "react-icons/fi";
+import { socialLinks } from "../Data/Portfolio";
 import welcome from "../Assets/blogImage/contact1.png";
 import Heading from "../Component/Heading";
 function Contact({ mode }) {
@@ -115,10 +116,26 @@ function Contact({ mode }) {
               </p>
             </div>
             <div className="flex gap-10">
-              <SocialMedia icon={<FiFacebook />} mode={mode} />
-              <SocialMedia icon={<FiLinkedin />} mode={mode} />
-              <SocialMedia icon={<FiInstagram />} mode={mode} />
-              <SocialMedia icon={<FiGithub />} mode={mode} />
+              <SocialMedia
+                icon={<FiFacebook />}
+                link={socialLinks.facebook}
+                mode={mode}
+              />
+              <SocialMedia
+                icon={<FiLinkedin />}
+                link={socialLinks.linkdin}
+                mode={mode}
+              />
+              <SocialMedia
+                icon={<FiInstagram />}
+                link={socialLinks.instagram}
+                mode={mode}
+              />
+              <SocialMedia
+                icon={<FiGithub />}
+                link={socialLinks.github}
+                mode={mode}
+              />
             </div>
           </div>
           <div

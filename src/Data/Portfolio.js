@@ -1,9 +1,6 @@
-import portfolio1 from "../Assets/Portfolio/portfolio-01.jpg";
-import portfolio2 from "../Assets/Portfolio/portfolio-02.jpg";
-import portfolio3 from "../Assets/Portfolio/portfolio-03.jpg";
-import portfolio4 from "../Assets/Portfolio/portfolio-04.jpg";
-import portfolio5 from "../Assets/Portfolio/portfolio-05.jpg";
-import portfolio6 from "../Assets/Portfolio/portfolio-06.jpg";
+import adminPanel from "../Assets/Portfolio/Admin panel.png";
+import bexer from "../Assets/Portfolio/bexer.png";
+import amiubas from "../Assets/Portfolio/amiubas.png";
 import profile1 from "../Assets/Image/final-home--1st.png";
 import profile2 from "../Assets/Image/final-home--2nd.png";
 import profile3 from "../Assets/Image/final-home--3rd.png";
@@ -22,83 +19,46 @@ import brand5 from "../Assets/Clients/brand-05.png";
 import blog1 from "../Assets/blogImage/blog-01.jpg";
 import blog2 from "../Assets/blogImage/blog-02.jpg";
 import blog3 from "../Assets/blogImage/blog-03.jpg";
-import blog4 from "../Assets/blogImage/blog-04.jpg";
 
 export const portfolio = [
   {
     id: 1,
-    image: portfolio1,
+    image: adminPanel,
     name: "DEVELOPMENT",
-    heading: "The services provide for design",
+    heading: "React admin panel project ",
+    link: "https://github.com/Fcode9/react-admin-panel",
     react: "611",
     blog: [
       {
-        heading: "The services provide for design ",
+        heading: "New react admin panel project  ",
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate distinctio assumenda explicabo veniam temporibus eligendi. Consectetur adipisicing elit. Cupiditate distinctio assumenda. dolorum alias suscipit rerum maiores aliquam earum odit, nihil culpa quas iusto hic minus!",
       },
     ],
   },
   {
     id: 2,
-    image: portfolio2,
+    image: bexer,
     name: "APPLICATION",
-    heading: "Mobile app landing design & app maintain",
+    heading: "Bexer company application by react",
+    link: "https://github.com/Fcode9/bexar",
     react: "753",
     blog: [
       {
-        heading: "Mobile app landing design & app maintain",
+        heading: "Bexer company application by react",
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate distinctio assumenda explicabo veniam temporibus eligendi. Consectetur adipisicing elit. Cupiditate distinctio assumenda. dolorum alias suscipit rerum maiores aliquam earum odit, nihil culpa quas iusto hic minus!",
       },
     ],
   },
   {
     id: 3,
-    image: portfolio3,
-    name: "PHOTOSHOP",
-    heading: "Logo design creativity & Application",
+    image: amiubas,
+    name: "HTML To React",
+    heading: "Amiubas react  Application",
+    link: "https://github.com/Fcode9/ambiusProject",
     react: "653",
     blog: [
       {
-        heading: "Logo design creativity & Application",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate distinctio assumenda explicabo veniam temporibus eligendi. Consectetur adipisicing elit. Cupiditate distinctio assumenda. dolorum alias suscipit rerum maiores aliquam earum odit, nihil culpa quas iusto hic minus!",
-      },
-    ],
-  },
-  {
-    id: 4,
-    image: portfolio4,
-    name: "FIGMA",
-    heading: "Mobile app landing design & Services",
-    react: "329",
-    blog: [
-      {
-        heading: "Mobile app landing design & Services",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate distinctio assumenda explicabo veniam temporibus eligendi. Consectetur adipisicing elit. Cupiditate distinctio assumenda. dolorum alias suscipit rerum maiores aliquam earum odit, nihil culpa quas iusto hic minus!",
-      },
-    ],
-  },
-  {
-    id: 5,
-    image: portfolio5,
-    name: "WEB DESIGN",
-    heading: "Design for technology & services",
-    react: "233",
-    blog: [
-      {
-        heading: "Design for technology & services",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate distinctio assumenda explicabo veniam temporibus eligendi. Consectetur adipisicing elit. Cupiditate distinctio assumenda. dolorum alias suscipit rerum maiores aliquam earum odit, nihil culpa quas iusto hic minus!",
-      },
-    ],
-  },
-  {
-    id: 6,
-    image: portfolio6,
-    name: "WEB Development",
-    heading: "App for technology & services",
-    react: "690",
-    blog: [
-      {
-        heading: "App for technology & services",
+        heading: "Amiubas react  Application",
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate distinctio assumenda explicabo veniam temporibus eligendi. Consectetur adipisicing elit. Cupiditate distinctio assumenda. dolorum alias suscipit rerum maiores aliquam earum odit, nihil culpa quas iusto hic minus!",
       },
     ],
@@ -107,113 +67,161 @@ export const portfolio = [
 
 export const education = [
   {
-    name: "Personal Portfolio April Fools",
-    time: "University of DVI (1997 - 2001)",
-    point: "4.30/5",
-    description:
-      "The education should be very interactual. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.",
+    name: "Diploma in engineering",
+    time: "Cumilla polytechnic institute (2014 - 2018)",
+    point: "2.79/4",
+    description: [{ Technology: ["Department of Computer technology"] }],
   },
   {
-    name: "Examples Of Personal Portfolio",
-    time: "College of Studies (2000 - 2002)",
-    point: "4.50/5",
-    description:
-      "Maecenas finibus nec sem ut imperdiet. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.",
-  },
-  {
-    name: "Tips For Personal Portfolio",
-    time: "University of Studies (1997 - 2001)",
-    point: "4.80/5",
-    description:
-      "If you are going to use a passage. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.",
+    name: "Secondary School Certificate",
+    time: "J.H.E.M High School (2011 - 2013)",
+    point: "4.00/5",
+    description: [{ Department: ["Department of Science"] }],
   },
 ];
 
 export const jobExperience = [
   {
-    name: "Diploma in Web Development",
-    time: "BSE In CSE (2004 - 2008)",
-    point: "4.70/5",
-    description:
-      "Contrary to popular belief. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.",
+    name: "Service Engineer",
+    time: "Asiamed (2019 - Continue)",
+    point: "",
+    description: [
+      {
+        Responsibilities: [
+          "• Installing and calibrating biomedical machines, equipment’s and software.",
+          "• Evaluating this safety, efficiency and effectiveness of biomedical machine, equipment and software.",
+          "• Maintaining and repairing biomedical machines and equipment, when needed.",
+          "• Providing technical support when needed.",
+          "• Keeping Up-To-Date service history on all biomedical machines and equipment.",
+          "• Training clinicians   and other personnel on how to use biomedical machines and equipment, safely and effectively.",
+          "• Researching new materials, technologies and engineering aspects of biomedical processes and system.",
+        ],
+      },
+    ],
   },
   {
-    name: "The Personal Portfolio Mystery",
-    time: "Job at Rainbow-Themes (2008 - 2016)",
-    point: "4.95/5",
-    description:
-      "Generate Lorem Ipsum which looks. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.",
-  },
-  {
-    name: "Diploma in Computer Science",
-    time: "Works at Plugin Development (2016 - 2020)",
-    point: "5.00/5",
-    description:
-      "Maecenas finibus nec sem ut imperdiet. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.",
+    name: "MIS Executive",
+    time: "Abulkhair Group Of Company (2018 - 2019)",
+    point: "",
+    description: [
+      {
+        Responsibilities: [
+          "• Daily sales statement sheet collects from various SO/PO.",
+          "• Check DSS & input manually Excel Sheet.",
+          "• Outlet wise SO/PO daily sales & collection posting in online software.",
+          "• SO/PO party wise sales & collection maintain daily.",
+          "• Outlet wise order receive & process and also print delivery memo.",
+          "• Manually sales & collection submit to high management.",
+          "• Monthly outlet wise sales & collection statement reconciliation with SO/PO.",
+          "• Monthly reconciliation with account sales & collection.",
+          "• Monthly report send to high management, SO/PO, outlet wise, territory wise, regional wise, divisional Wise etc.",
+        ],
+      },
+    ],
   },
 ];
 
-export const networking = [
+export const training = [
   {
-    name: "Diploma in Web Development",
-    time: "BSE In CSE (2004 - 2008)",
-    point: "4.70/5",
-    description:
-      "Contrary to popular belief. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.",
+    name: "RESPONSIVE WEB DESIGN",
+    time: "FREE CODE CAMP",
+    point: "",
+    description: [
+      { duration: ["Duration : 300 hours"] },
+      { year: ["Year : 2021"] },
+      {
+        Topics: ["•	HTML", "•	CSS", "•	Bootstrap", "•	tailwind"],
+      },
+    ],
   },
   {
-    name: "The Personal Portfolio Mystery",
-    time: "Job at Rainbow-Themes (2008 - 2016)",
-    point: "4.95/5",
-    description:
-      "Generate Lorem Ipsum which looks. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.",
+    name: "SYSTEM & NETWORK ADMINISTRATION USING LINUX",
+    time: "CSLiT",
+    point: "",
+    description: [
+      { duration: ["Duration : 3 month"] },
+      { year: ["Year : 3 month"] },
+      {
+        Topics: [
+          "•	Linux networking concept & review & Network configuration",
+          "•	Network troubleshooting & monitoring & Remote access",
+          "•	Mail server, File sharing, FTP server, DNS server, Web server & Samba server",
+          "•	Network file systems, Firewalls & System log",
+        ],
+      },
+    ],
   },
   {
-    name: "Diploma in Computer Science",
-    time: "Works at Plugin Development (2016 - 2020)",
-    point: "5.00/5",
-    description:
-      "Maecenas finibus nec sem ut imperdiet. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.",
+    name: "MICROSOFT OFFICE APPLICATION",
+    time: "BALIA COMPUTER TRANING CENTER",
+    point: "",
+    description: [
+      { duration: ["Duration : 3 month"] },
+      { year: ["Year : 2013"] },
+      {
+        Topics: [
+          "•	Microsoft Word",
+          "•	Microsoft Excel",
+          "•	Microsoft Powerpoit",
+          "•	Microsoft Access",
+        ],
+      },
+    ],
+  },
+  {
+    name: "ISP SETUP & ADMINISTRATION USING MIKROTIK",
+    time: "CSLiT",
+    point: "",
+    description: [
+      { duration: ["Duration : 3 month"] },
+      { year: ["Year : 2018"] },
+      {
+        Topics: [
+          "•	MikroTik Installation, License & package upgradation",
+          "•	IP Access NAT, Bridge, NTP, VLAN & Routing",
+          "•	Bandwidth Management, IP Restriction, DHCP Server, User Management and MRTG ",
+          "•	PPPoE Server Configuration, VPN Configuration & Proxy Configuration  ",
+          "•	Tools Introduction, Monitoring and E-mail Backup-Restore",
+          "•	Link Redundancy Solution & Hotspot Solution",
+        ],
+      },
+    ],
+  },
+  {
+    name: "CCNA ROUTING & SWTCHING",
+    time: "TECHNO IT SOLUTION",
+    point: "",
+    description: [
+      { duration: ["Duration : 3 month"] },
+      { year: ["Year : 2017"] },
+      {
+        Topics: [
+          "•	IP Addressing Sub netting & VLSM",
+          "•	Managing Cisco Internetwork & IP Routing Technologies",
+          "•	Configuring IP Routing _ Static Routing, Default Routing, Dynamic Routing",
+          "•	Switching, Cisco Router Cabling & Configuration",
+          "•	WAN Technology-Leased Line & Protocols",
+          "•	Security With Access Control Lists ",
+          "•	Networking Devices and Designs",
+        ],
+      },
+    ],
   },
 ];
 
-export const coding = [
-  {
-    name: "Diploma in Web Development",
-    time: "BSE In CSE (2004 - 2008)",
-    point: "4.70/5",
-    description:
-      "Contrary to popular belief. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.",
-  },
-  {
-    name: "The Personal Portfolio Mystery",
-    time: "Job at Rainbow-Themes (2008 - 2016)",
-    point: "4.95/5",
-    description:
-      "Generate Lorem Ipsum which looks. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.",
-  },
-  {
-    name: "Diploma in Computer Science",
-    time: "Works at Plugin Development (2016 - 2020)",
-    point: "5.00/5",
-    description:
-      "Maecenas finibus nec sem ut imperdiet. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.",
-  },
-];
+export const coding = [];
 
-export const computerSkill = [
-  { name: "Photoshop", value: 100 },
-  { name: "Figma", value: 95 },
-  { name: "Adobe xd", value: 60 },
-  { name: "Adobe illustrator", value: 70 },
-  { name: "design", value: 90 },
-];
-export const developmentSkill = [
-  { name: "HTML", value: 85 },
-  { name: "CSS", value: 80 },
-  { name: "JAVASCRIPT", value: 90 },
-  { name: "Reactjs", value: 75 },
-  { name: "React native", value: 70 },
+export const skill = [
+  { name: "HTML", value: 95 },
+  { name: "CSS", value: 90 },
+  { name: "Boot Strap & tailwind", value: 90 },
+  { name: "JAVASCRIPT", value: 80 },
+  { name: "Reactjs", value: 85 },
+  { name: "React native", value: 80 },
+  { name: "Redux", value: 75 },
+  { name: "Linux", value: 70 },
+  { name: "CCNA", value: 95 },
+  { name: "Mikrotik", value: 60 },
 ];
 
 export const review = [
@@ -295,10 +303,10 @@ export const review = [
 ];
 
 export const resumeNav = [
-  { title: "Education & Experience", link: "/" },
+  { title: "Experience", link: "/" },
+  { title: "Education", link: "/education" },
   { title: "Professional Skills", link: "/skill" },
   { title: "Training Summary", link: "/training" },
-  { title: " Personal Information", link: "/personalInfo" },
 ];
 
 export const clientNav = [
@@ -471,5 +479,31 @@ export const blog = [
         comment: "New",
       },
     ],
+  },
+];
+
+export const socialLinks = {
+  facebook: "https://www.facebook.com/faysal.mahamud.12345",
+  instagram: "https://www.instagram.com/faysal_mahamud1/",
+  linkdin:
+    "https://www.linkedin.com/in/fahim-uddin-159a86194/?originalSubdomain=bd",
+  github: "https://github.com/Fcode9",
+};
+
+export const work = [
+  {
+    heading: "React Application",
+    shortDesc:
+      "Create React App is a comfortable environment for learning React, and is the best way to start building a new single-page application in React. ",
+  },
+  {
+    heading: "React-Native Application",
+    shortDesc:
+      "Create native apps for Android, iOS, and more using React. React Native combines the best parts of native development with React.",
+  },
+  {
+    heading: "Front-End Development",
+    shortDesc:
+      "Front-end web development is the development of the graphical user interface of a website, through the use of HTML, CSS, and JavaScript.",
   },
 ];

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Subnav({ navItem, flex, position, mode }) {
   const [active, setActive] = useState("/");
@@ -21,7 +21,7 @@ function Subnav({ navItem, flex, position, mode }) {
             : "var(--gradient-box-w)",
       }}
     >
-      {navItem?.map((item) => {
+      {navItem?.map((item, i) => {
         return (
           <Link
             className={`p-8 w-full rounded-2xl ${
@@ -32,6 +32,7 @@ function Subnav({ navItem, flex, position, mode }) {
             }`}
             to={item.link}
             onClick={() => setActive(item.link)}
+            key={i + "sub"}
           >
             {item.title}
           </Link>

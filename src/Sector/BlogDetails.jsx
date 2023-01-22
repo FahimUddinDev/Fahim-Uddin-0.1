@@ -8,10 +8,10 @@ function BlogDetails({ mode }) {
   const navigate = useNavigate();
   let id = useParams();
   id = id["*"];
-  let info = blog.find((item) => item.id == id);
+  let info = blog.find((item) => item.id.toString() === id);
   return (
     <div
-      className="relative flex flex-col gap-10  justify-center items-center m-10 md:m-28 overflow-hidden p-10 pb-20 rounded-2xl"
+      className="relative flex flex-col gap-10  justify-center items-center p-10 md:p-28 overflow-hidden p-10 pb-20 rounded-2xl"
       style={{
         boxShadow:
           mode === "dark" ? "var(--shadow-1)" : "var(--shadow-white-3)",

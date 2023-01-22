@@ -4,14 +4,16 @@ import Heading from "../Heading";
 function ProfessionalSkillDiv({ skill, name, heading, mode }) {
   return (
     <div className="w-full flex flex-col items-start">
-      <Heading
-        name={name}
-        heading={heading}
-        size={4}
-        mode={mode}
-        align="start"
-      />
-      <div className="flex flex-col w-full gap-10">
+      {name !== "" && (
+        <Heading
+          name={name}
+          heading={heading}
+          size={4}
+          mode={mode}
+          align="start"
+        />
+      )}
+      <div className={`flex flex-col w-full gap-10 ${name === "" && "mt-32"}`}>
         {skill?.map((items, index) => {
           return (
             <Skill

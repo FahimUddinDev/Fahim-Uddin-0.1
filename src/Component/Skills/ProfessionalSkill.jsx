@@ -1,21 +1,35 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ProfessionalSkillDiv from "./ProfessionalSkillDiv";
-import { computerSkill, developmentSkill } from "../../Data/Portfolio";
+import { skill } from "../../Data/Portfolio";
 function ProfessionalSkill({ mode }) {
+  function getWindowDimensions() {
+    const { innerWidth: width } = window;
+    return width;
+  }
+  const [windowWidth, setWindowWidth] = useState("");
+  useEffect(() => {
+    setWindowWidth(getWindowDimensions());
+  }, []);
+  const info =
+    windowWidth > 768 ? skill.slice(0, Math.ceil(skill.length / 2)) : skill;
+  const info2 =
+    windowWidth > 768 ? skill.slice(Math.ceil(skill.length / 2)) : null;
   return (
     <div className="w-full gap-20 px-10 flex flex-col md:flex-row">
       <ProfessionalSkillDiv
-        skill={computerSkill}
+        skill={info}
         name="Features"
-        heading="Design Skill"
+        heading="My Skills"
         mode={mode}
       />
-      <ProfessionalSkillDiv
-        skill={developmentSkill}
-        name="Features"
-        heading="Development Skill"
-        mode={mode}
-      />
+      {info2 && (
+        <ProfessionalSkillDiv
+          skill={info2}
+          name={""}
+          heading={"."}
+          mode={mode}
+        />
+      )}
     </div>
   );
 }

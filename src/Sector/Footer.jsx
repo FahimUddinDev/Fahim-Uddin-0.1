@@ -33,7 +33,7 @@ function Footer({ mode }) {
         </div>
       </Link>
       <div>
-        <p
+        <div
           className="flex justify-center items-center text-xl gap-2"
           style={{ color: "var(--color-body)" }}
         >
@@ -42,7 +42,7 @@ function Footer({ mode }) {
             <span className="cursor-pointer  duration-500">Fahim Uddin</span>
             <div className="under-line absolute duration-500"></div>
           </div>
-        </p>
+        </div>
       </div>
     </div>
   );

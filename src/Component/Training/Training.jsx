@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { jobExperience } from "../../Data/Portfolio";
+import { training } from "../../Data/Portfolio";
 import CartDivision from "../Education/CartDivision";
-function Experience({ mode }) {
+function Training({ mode }) {
   function getWindowDimensions() {
     const { innerWidth: width } = window;
     return width;
@@ -12,27 +12,25 @@ function Experience({ mode }) {
   }, []);
   const info =
     windowWidth > 768
-      ? jobExperience.slice(0, Math.ceil(jobExperience.length / 2))
-      : jobExperience;
+      ? training.slice(0, Math.ceil(training.length / 2))
+      : training;
   const info2 =
-    windowWidth > 768
-      ? jobExperience.slice(Math.ceil(jobExperience.length / 2))
-      : null;
+    windowWidth > 768 ? training.slice(Math.ceil(training.length / 2)) : null;
   return (
     <div className="flex gap-10 flex-col md:flex-row">
       <CartDivision
         mode={mode}
         info={info}
-        name={"2018 - 2023"}
-        heading="My Experience"
+        name="2013 - 2023"
+        heading="Short Info Of My Training"
       />
       {info2 && (
         <div className="mt-8 w-full">
-          <CartDivision mode={mode} info={info2} name="" heading="  ." />
+          <CartDivision info={info2} name="" heading="." mode={mode} />
         </div>
       )}
     </div>
   );
 }
 
-export default Experience;
+export default Training;

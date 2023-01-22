@@ -5,9 +5,9 @@ const ReviewStar = ({ review }) => {
   const star = [];
   for (let i = 1; i <= 5; i++) {
     if (i <= review) {
-      star.push(<AiFillStar />);
+      star.push(<AiFillStar key={i + "star"} />);
     } else {
-      star.push(<AiOutlineStar />);
+      star.push(<AiOutlineStar key={i + "star"} />);
     }
   }
   return star;

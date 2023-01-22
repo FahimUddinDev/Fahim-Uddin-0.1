@@ -10,7 +10,10 @@ function PortfolioCart({ info, icon, sector, mode }) {
         mode === "dark" ? "portfolioCart" : "portfolioCart-w"
       } cursor-pointer duration-1000`}
     >
-      <div className="w-full overflow-hidden duration-500 rounded-xl">
+      <div
+        className="w-full overflow-hidden duration-500 rounded-xl flex"
+        style={{ height: "200px" }}
+      >
         <img
           className="portfolio-image duration-500 rounded-xl"
           src={info.image}
